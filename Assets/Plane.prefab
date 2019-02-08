@@ -111,5 +111,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RampPiece1: {fileID: 1682365747530962, guid: 2b72a07f07fb1c842b596f5d54ea67e1, type: 2}
-  SelectionBox: {fileID: 1182941318647248, guid: 2ac9ee73d3e4e134c840a61296262f9a,
+  SelectionBox: {fileID: 1523028945775788, guid: 848cc8d7e1fa284439a1b07d30e6ce5c,
     type: 2}
