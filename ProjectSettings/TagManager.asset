@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - piece
-  - 1
+  - StartPiece
   layers:
   - Default
   - TransparentFX
