@@ -37,7 +37,7 @@ public class PiecePlacement : MonoBehaviour
     }
     void OnMouseExit()
     {
-
+        
         Destroy(transform.GetChild(0).gameObject);
         // foreach (Transform dick in transform) {
         // float i = 0;
