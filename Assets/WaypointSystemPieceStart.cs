@@ -21,15 +21,12 @@ public class WaypointSystemPieceStart : MonoBehaviour {
         foreach (GameObject OtherWP in OtherWPs)
         {
 
-            if (col.gameObject.tag == "piece")
+            if (col.gameObject == OtherWP)
             {
 
                 WaypointSystemPiece OtherComp = OtherWP.GetComponent<WaypointSystemPiece>();
                 for (int i = 0; i <= OtherComp.Waypoints.Count; i++)
                 {
-
-
-
                     Waypoints.Add(OtherComp.Waypoints[i]);
 
                 }
