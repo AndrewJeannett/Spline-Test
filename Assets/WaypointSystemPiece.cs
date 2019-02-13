@@ -5,31 +5,46 @@ using UnityEngine;
 public class WaypointSystemPiece : MonoBehaviour
 {
     public List<Transform> Waypoints;
-    private bool ColStart;
+    private bool ColStart=false;
+    private int ColCount = 0;
 
+    private void Update()
+    {
+        Debug.Log(ColStart);
+    }
     void OnTriggerEnter(Collider col)
     {
         GameObject[] OtherWPs;
-        Debug.Log(ColStart);
+        
         OtherWPs = GameObject.FindGameObjectsWithTag("piece");
         if (col.gameObject.tag == "StartPiece")
         {
             ColStart = true;
+            ColCount++;
         }
-        else { ColStart = false; }
+       
         foreach (GameObject OtherWP in OtherWPs)
+
         {
             WaypointSystemPiece OtherComp = OtherWP.GetComponent<WaypointSystemPiece>();
             if (col.gameObject == OtherWP)
+                ColCount++;
             {
-             
                 
-               
-                for (int i = 0; i <= OtherComp.Waypoints.Count; i++)
+                if ((ColStart == true)&(OtherComp.ColCount > 1))
                 {
-                    if (OtherComp.ColStart==false)
+                    
+                    OtherComp.ColStart = true;
+                    
+                }
+                for (int i = 0; i <= Waypoints.Count; i++)
+                {
+                    if ((OtherComp.ColStart == false)&(OtherComp.ColCount<=1))
                     {
-                        Waypoints.Add(OtherComp.Waypoints[i]);
+                        OtherComp.Waypoints.Add(Waypoints[i]);
+                        ColStart = false;
+                        ColCount--;
+
                     }
                 }
             }

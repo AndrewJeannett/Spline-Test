@@ -15,10 +15,10 @@ public class WaypointSystemPieceStart : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
         GameObject[] OtherWPs;
-
+        //Creates an array of all pieces in scene
         OtherWPs = GameObject.FindGameObjectsWithTag("piece");
 
-        foreach (GameObject OtherWP in OtherWPs)
+       /*foreach (GameObject OtherWP in OtherWPs)
         {
 
             if (col.gameObject == OtherWP)
@@ -31,7 +31,7 @@ public class WaypointSystemPieceStart : MonoBehaviour {
 
                 }
             }
-        }
+        }*/
     }
         // Update is called once per frame
         void Update() {
