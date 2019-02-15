@@ -41,7 +41,7 @@ public class WaypointSystemPiece : MonoBehaviour
                 {
                     if ((OtherComp.ColStart == false)&(OtherComp.ColCount<=1))
                     {
-                        OtherComp.Waypoints.Add(Waypoints[i]);
+                        
                         ColStart = false;
                         ColCount--;
 
