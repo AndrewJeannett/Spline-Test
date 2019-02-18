@@ -5,48 +5,44 @@ using UnityEngine;
 public class WaypointSystemPiece : MonoBehaviour
 {
     public List<Transform> Waypoints;
-    private bool ColStart=false;
-    private int ColCount = 0;
-
-    private void Update()
+    public bool ColStart = false;
+    GameObject[] OtherWPs;
+    BoxCollider ThisCol;
+    private void Start()
     {
-        Debug.Log(ColStart);
-    }
-    void OnTriggerEnter(Collider col)
-    {
-        GameObject[] OtherWPs;
-        
+       ThisCol = gameObject.GetComponent<BoxCollider>();
         OtherWPs = GameObject.FindGameObjectsWithTag("piece");
-        if (col.gameObject.tag == "StartPiece")
-        {
-            ColStart = true;
-            ColCount++;
-        }
-       
+    }
+
+    void OnTriggerStay(Collider col)
+    {
+
+
+
+
+
         foreach (GameObject OtherWP in OtherWPs)
 
         {
-            WaypointSystemPiece OtherComp = OtherWP.GetComponent<WaypointSystemPiece>();
-            if (col.gameObject == OtherWP)
-                ColCount++;
-            {
-                
-                if ((ColStart == true)&(OtherComp.ColCount > 1))
-                {
-                    
-                    OtherComp.ColStart = true;
-                    
-                }
-                for (int i = 0; i <= Waypoints.Count; i++)
-                {
-                    if ((OtherComp.ColStart == false)&(OtherComp.ColCount<=1))
-                    {
-                        
-                        ColStart = false;
-                        ColCount--;
+            Transform[] Waypoints = GetComponentsInChildren<Transform>();
+            WaypointSystemPiece OtherClass = OtherWP.GetComponent<WaypointSystemPiece>();
+            GameObject StartPiece = GameObject.FindGameObjectWithTag("StartPiece");
+            WaypointSystemPieceStart OtherStartClass = StartPiece.GetComponent<WaypointSystemPieceStart>();
+            
 
+            if ((col.gameObject == OtherWP) && (ColStart))
+
+            {
+                OtherClass.ColStart = true;
+                OtherWP.transform.SetParent(transform.parent);
+                for (int i = 0; i < Waypoints.Length; i++)
+                {
+                    if (Waypoints[i].transform.parent != StartPiece.transform)
+                    {
+                        OtherStartClass.Waypoints.Add(Waypoints[i]);
                     }
                 }
+                ThisCol.enabled = false;
             }
         }
     }
