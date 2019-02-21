@@ -37,7 +37,7 @@ public class WaypointSystemPieceStart : MonoBehaviour
                     otherClass.ColStart = true;
                     OtherWP.transform.SetParent(transform);
                     //Pieces.Add(OtherWP);
-                    ColTrue = true;
+                    ColTrue = false;
                     
                 }
              
@@ -59,8 +59,8 @@ public class WaypointSystemPieceStart : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("count=" + Waypoints.Count);
-        Debug.Log("current=" + current);
+        //  Debug.Log("count=" + Waypoints.Count);
+        // Debug.Log("current=" + current);
         player.transform.position = Vector3.MoveTowards(player.transform.position, Waypoints[current].transform.position, Time.deltaTime * speed);
         if (Vector3.Distance(Waypoints[current].transform.position, player.transform.position) < WpRadius)
         {
