@@ -20,7 +20,7 @@ public class WaypointSystemPiece : MonoBehaviour
         OtherWPs = GameObject.FindGameObjectsWithTag("piece");
     }
 
-    void OnTriggerStay(Collider col)
+    void OnTriggerEnter(Collider col)
     {
         Debug.Log(ColCount);
         foreach (GameObject OtherWP in OtherWPs)
@@ -38,10 +38,11 @@ public class WaypointSystemPiece : MonoBehaviour
             
             ColCount++;
 
-                
+           
                 
             
         }
+        
     }
     private void FixedUpdate()
     {

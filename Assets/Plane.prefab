@@ -110,6 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016cf573af91e9d40bca368edd54e522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RampPiece1: {fileID: 1682365747530962, guid: 2b72a07f07fb1c842b596f5d54ea67e1, type: 2}
-  SelectionBox: {fileID: 1523028945775788, guid: 848cc8d7e1fa284439a1b07d30e6ce5c,
+  RampPiece1: {fileID: 1318850899015816, guid: 34be5394a431f4a4cbd3926c4421b673, type: 2}
+  SelectionBox: {fileID: 1318850899015816, guid: 3a4cdbd1e675df14cb938a588aaa6a51,
     type: 2}
