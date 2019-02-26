@@ -5,33 +5,14 @@ using UnityEngine;
 public class WaypointSystemPiece : MonoBehaviour
 {
     public List<Transform> Waypoints;
-    public bool ColStart = false;
-    GameObject[] OtherWPs;
-    public BoxCollider ThisCol;
-    public static int ColCount;
-    private bool isColliding = false;
-    private GameObject OtherWPc;
+    
 
     private void Start()
 
     {
-
-
-
-        ThisCol.enabled = true;
-        // StartCoroutine("ColliderDelay");
-
+      
     }
-    //private void Update()
-    //{
-    //    OtherWPs = GameObject.FindGameObjectsWithTag("piece");
-    //}
-    //IEnumerator ColliderDelay()
-    //{
-
-    //    yield return new WaitForSeconds(.5f);
-    //    ThisCol.enabled = true;
-    //}
+  
     void OnTriggerEnter(Collider other)
     {
 
@@ -59,57 +40,10 @@ public class WaypointSystemPiece : MonoBehaviour
             ListAdd();
         }
     }
-    //void OnTriggerEnter(Collider col)
-    //{
 
-    //    {
-    //        Debug.Log(ColCount);
-    //        foreach (GameObject OtherWP in OtherWPs)
-
-    //        {
-
-
-
-    //            if (col == OtherWP)
-
-    //            {
-    //                isColliding = true;
-
-    //               // OtherWP.transform.SetParent(transform.parent);
-    //                //OtherWP.tag = ("StartPiece");
-    //                ThisCol.enabled = false;
-    //            }
-
-    //            ColCount++;
-
-
-
-
-    //        }
-    //    }
-
-    //}
-
-    //private void FixedUpdate()
-
-
-    //    {
-    //    if (Input.GetButtonDown("Fire3"))
-    //    {
-    //        ThisCol.enabled = true;
-    //    }
-    //        Invoke("ListAdd", .1f);
-    //    }
-
-    //void ColliderOff()
-    //{
-    //    ThisCol.enabled = false;
-    //}
     void ListAdd()
     {
-        //foreach (GameObject OtherWP in OtherWPs)
-
-        //Transform[] Waypoints = GetComponentsInChildren<Transform>();
+        
 
         GameObject StartPiece = GameObject.FindGameObjectWithTag("StartPiece");
         WaypointSystemPieceStart OtherStartClass = StartPiece.GetComponent<WaypointSystemPieceStart>();
@@ -136,4 +70,4 @@ public class WaypointSystemPiece : MonoBehaviour
     }
 }
 
-//}
+
