@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 54593498752686838}
   m_Layer: 0
   m_Name: Cylinder_004
-  m_TagString: piece
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,3 +402,4 @@ MonoBehaviour:
   - {fileID: 4926996966384732}
   - {fileID: 4943771370023314}
   ColStart: 0
+  ThisCol: {fileID: 0}

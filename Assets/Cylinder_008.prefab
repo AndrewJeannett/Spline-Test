@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 64760256553957956}
   - component: {fileID: 65515836932237010}
   - component: {fileID: 114524251176646916}
+  - component: {fileID: 54284111625515532}
   m_Layer: 0
   m_Name: Cylinder_008
   m_TagString: StartPiece
@@ -92,7 +93,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1782774691377078}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.11, y: 24.41785, z: -5.657877}
+  m_LocalPosition: {x: 9.97, y: 0.1, z: -3.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4275745759567574}
@@ -108,7 +109,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1937998064072608}
   m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3931427, y: 0.50027084, z: 0}
+  m_LocalPosition: {x: 5.01, y: 0.50027084, z: 0}
   m_LocalScale: {x: 0.26509, y: 0.26509, z: 0.26509}
   m_Children: []
   m_Father: {fileID: 4022024036083972}
@@ -308,6 +309,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1876010029817212}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54284111625515532
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1782774691377078}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!64 &64760256553957956
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -329,7 +345,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1937998064072608}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -341,7 +357,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1876010029817212}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -365,7 +381,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1682031657604314}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -388,5 +404,6 @@ MonoBehaviour:
   - {fileID: 4437720393840226}
   - {fileID: 4831222571834634}
   player: {fileID: 0}
-  speed: 5
+  speed: 12
   WpRadius: 0.1
+  ThisCol: {fileID: 65515836932237010}
