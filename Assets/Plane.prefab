@@ -110,6 +110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016cf573af91e9d40bca368edd54e522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RampPiece1: {fileID: 1318850899015816, guid: 34be5394a431f4a4cbd3926c4421b673, type: 2}
-  SelectionBox: {fileID: 1318850899015816, guid: 3a4cdbd1e675df14cb938a588aaa6a51,
-    type: 2}
+  RampPiece:
+  - {fileID: 1682365747530962, guid: 2b72a07f07fb1c842b596f5d54ea67e1, type: 2}
+  - {fileID: 1530532783193458, guid: 0899e9348d9aab34eac756fdf45c35f0, type: 2}
+  - {fileID: 1782774691377078, guid: 6df00e9e0d4a2e54cb9808a3654bbc9e, type: 2}
+  SelectionBox:
+  - {fileID: 1523028945775788, guid: 848cc8d7e1fa284439a1b07d30e6ce5c, type: 2}
+  - {fileID: 1530532783193458, guid: d0aca3e856bd353488219564f0c8675b, type: 2}
+  - {fileID: 1782774691377078, guid: dd76fdde4db77b94a8b15a8ffe139c0e, type: 2}
+  Supports:
+  - {fileID: 1790915184153604, guid: aa3c9615ff4d383478057a3031a48930, type: 2}
+  - {fileID: 1790915184153604, guid: aa3c9615ff4d383478057a3031a48930, type: 2}
+  - {fileID: 1790915184153604, guid: aa3c9615ff4d383478057a3031a48930, type: 2}
+  SupportShadow:
+  - {fileID: 1790915184153604, guid: d83aed44130340840af9802d83dd7202, type: 2}
+  - {fileID: 1790915184153604, guid: d83aed44130340840af9802d83dd7202, type: 2}
+  - {fileID: 1790915184153604, guid: d83aed44130340840af9802d83dd7202, type: 2}

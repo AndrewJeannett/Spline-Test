@@ -22,7 +22,7 @@ public class WaypointSystemPieceStart : MonoBehaviour
     private void Update()
     {
 
-         Debug.Log("current=" + current);
+       
 
         player.transform.position = Vector3.MoveTowards(player.transform.position, Waypoints[current].transform.position, Time.deltaTime * speed);
        
