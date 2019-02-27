@@ -111,18 +111,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RampPiece:
-  - {fileID: 1682365747530962, guid: 2b72a07f07fb1c842b596f5d54ea67e1, type: 2}
+  - {fileID: 1191383884326990, guid: 20265aa0992bed44589f650b29526ef5, type: 2}
   - {fileID: 1530532783193458, guid: 0899e9348d9aab34eac756fdf45c35f0, type: 2}
-  - {fileID: 1782774691377078, guid: 6df00e9e0d4a2e54cb9808a3654bbc9e, type: 2}
+  - {fileID: 1684757127224176, guid: a73d17fa52fa894428a6bd0eaea5c08e, type: 2}
+  - {fileID: 1255462527337202, guid: 905ccbc55c0009c4fb34563e2323aef2, type: 2}
   SelectionBox:
-  - {fileID: 1523028945775788, guid: 848cc8d7e1fa284439a1b07d30e6ce5c, type: 2}
+  - {fileID: 1191383884326990, guid: c5197e4f59b92f247b5b4ed0ff20f701, type: 2}
   - {fileID: 1530532783193458, guid: d0aca3e856bd353488219564f0c8675b, type: 2}
-  - {fileID: 1782774691377078, guid: dd76fdde4db77b94a8b15a8ffe139c0e, type: 2}
+  - {fileID: 1684757127224176, guid: 2bd4532032c25f947ad708a9bd22efc7, type: 2}
+  - {fileID: 1255462527337202, guid: a6069a16d111e6b4ea71964fcd9f8101, type: 2}
   Supports:
+  - {fileID: 1495110494035922, guid: 5d480bb179c39a540bdd80b5be250988, type: 2}
   - {fileID: 1790915184153604, guid: aa3c9615ff4d383478057a3031a48930, type: 2}
-  - {fileID: 1790915184153604, guid: aa3c9615ff4d383478057a3031a48930, type: 2}
-  - {fileID: 1790915184153604, guid: aa3c9615ff4d383478057a3031a48930, type: 2}
+  - {fileID: 1352433265325608, guid: fdad6143a258bff46bd30a17b44cda6c, type: 2}
+  - {fileID: 1407134343597168, guid: 522d9834dd05ff74d85d0454e4252d72, type: 2}
   SupportShadow:
+  - {fileID: 1495110494035922, guid: d21ac0c38e2672942af28b4418c09e90, type: 2}
   - {fileID: 1790915184153604, guid: d83aed44130340840af9802d83dd7202, type: 2}
-  - {fileID: 1790915184153604, guid: d83aed44130340840af9802d83dd7202, type: 2}
-  - {fileID: 1790915184153604, guid: d83aed44130340840af9802d83dd7202, type: 2}
+  - {fileID: 1352433265325608, guid: dbcab9ff871e9d9498248663cdcf40d5, type: 2}
+  - {fileID: 1407134343597168, guid: 70b79c1c99c1be247a91b792601fb770, type: 2}

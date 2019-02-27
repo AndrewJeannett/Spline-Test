@@ -23,7 +23,7 @@ public class WaypointSystemPiece : MonoBehaviour
         if (other.gameObject == StartPiece)
         {
 
-            Debug.Log("hit2");
+          
             gameObject.transform.SetParent(StartPiece.transform);
             other.enabled = false;
             gameObject.tag = "StartPiece";
@@ -32,7 +32,7 @@ public class WaypointSystemPiece : MonoBehaviour
         if ((other.gameObject.transform.parent == StartPiece.transform) && (transform.parent == null))
         {
 
-            Debug.Log("hit2");
+            
 
             other.enabled = false;
             gameObject.tag = "StartPiece";
@@ -52,7 +52,7 @@ public class WaypointSystemPiece : MonoBehaviour
         int LastIndex = OtherStartClass.Waypoints.Count - 1;
         Transform LastIndexGO = OtherStartClass.Waypoints[LastIndex].GetComponent<Transform>();
         float Dist = Vector3.Distance(LastIndexGO.position, transform.position);
-        Debug.Log(Dist);
+        //Debug.Log(Dist);
         if (Dist >= 3.5f)
         {
             Waypoints.Reverse();
