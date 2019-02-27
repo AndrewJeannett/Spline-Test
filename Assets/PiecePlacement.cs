@@ -11,6 +11,7 @@ public class PiecePlacement : MonoBehaviour
     private int PieceType;
     private int Rotation;
     private int PieceHeight;
+   
 
     // Use this for initialization
     void Start()
@@ -42,9 +43,14 @@ public class PiecePlacement : MonoBehaviour
             Debug.Log("rotate");
             transform.GetChild(0).rotation = Quaternion.Euler(0, Rotation + 90, 0);
         }
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             PieceHeight += 1;
+
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            PieceHeight -= 1;
 
         }
     }
@@ -54,6 +60,7 @@ public class PiecePlacement : MonoBehaviour
     }
     void OnMouseEnter()
     {
+        
         ShadowPiece();
 
 
