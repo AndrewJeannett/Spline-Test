@@ -41,17 +41,32 @@ public class PiecePlacement : MonoBehaviour
         {
             Rotation += 90;
             Debug.Log("rotate");
-            transform.GetChild(0).rotation = Quaternion.Euler(0, Rotation + 90, 0);
+            foreach (Transform child in transform)
+            {
+                child.rotation = Quaternion.Euler(0, Rotation + 90, 0);
+            }
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             PieceHeight += 1;
-
+            DestroyAll();
+            
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             PieceHeight -= 1;
+            DestroyAll();
+           
+        }
+    }
+    void DestroyAll()
+    {
+        if (transform.childCount > 0)
+        {
 
+            foreach (Transform child in transform)
+                Destroy(child.gameObject);
+            ShadowPiece();
         }
     }
     void OnMouseDown()
@@ -79,6 +94,7 @@ public class PiecePlacement : MonoBehaviour
 
     void ShadowPiece()
     {
+
         Vector3 piecePos = new Vector3(transform.position.x, transform.position.y + .1f + PieceHeight, transform.position.z);
 
         Instantiate(SelectionBox[PieceType], piecePos, Quaternion.Euler(0, Rotation + 90, 0), transform);
@@ -93,9 +109,11 @@ public class PiecePlacement : MonoBehaviour
     {
         if (transform.childCount > 0)
         {
-            
-            foreach(Transform child in transform)
-            Destroy(child.gameObject);
+
+            foreach (Transform child in transform)
+            {
+                Destroy(child.gameObject);
+            }
         }
         // foreach (Transform dick in transform) {
         // float i = 0;
