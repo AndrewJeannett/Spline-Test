@@ -16,7 +16,7 @@ public class BallScript : MonoBehaviour {
         StartClass = Startpiece.GetComponent<WaypointSystemPieceStart>();
         
 	}
-    public void OnTriggerEnter(Collider Col)
+    public void OnTriggerStay(Collider Col)
     {
         if (Col.tag == "up")
         {
@@ -44,7 +44,7 @@ public class BallScript : MonoBehaviour {
 
         if (Vector3.Distance(Path[current].transform.position, transform.position) < WpRadius)
         {
-            if (speed < 0)
+            if (speed < .1f)
             {
                 current--;
             }
