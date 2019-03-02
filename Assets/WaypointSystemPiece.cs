@@ -20,6 +20,7 @@ public class WaypointSystemPiece : MonoBehaviour
         Collider StartCol = StartPiece.GetComponent<Collider>();
         Debug.Log("SP=" + StartPiece);
         Debug.Log(other.gameObject);
+      
         if (other.gameObject == StartPiece)
         {
 
@@ -56,6 +57,16 @@ public class WaypointSystemPiece : MonoBehaviour
         if (Dist >= 3.5f)
         {
             Waypoints.Reverse();
+           
+            foreach (Transform child in GetComponentsInChildren<Transform>())
+            {
+                if (child.tag == "up")
+                {
+                    child.tag = "down";
+                }
+                
+            }
+         
         }
         for (int i = 0; i < Waypoints.Count; i++)
         {

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65624590395700684}
   m_Layer: 0
   m_Name: WayPoint
-  m_TagString: Untagged
+  m_TagString: straight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 65895633583863636}
   m_Layer: 0
   m_Name: WayPoint (1)
-  m_TagString: Untagged
+  m_TagString: straight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1684757127224176}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.2021992, y: 37.344963, z: -13.554136}
+  m_LocalPosition: {x: 4.535544, y: 15.335493, z: -29.627636}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4515119359611216}

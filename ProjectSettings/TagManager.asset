@@ -6,6 +6,9 @@ TagManager:
   tags:
   - piece
   - StartPiece
+  - up
+  - down
+  - straight
   layers:
   - Default
   - TransparentFX
