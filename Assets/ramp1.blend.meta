@@ -44,6 +44,7 @@ ModelImporter:
     2100008: Material_003
     2100010: Material_004
     2100012: Material_005
+    2100014: Material_006
     2300000: BezierCurve
     2300002: Cylinder_000
     2300004: Cylinder_001
@@ -150,7 +151,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
