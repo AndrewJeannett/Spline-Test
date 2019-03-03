@@ -11,6 +11,7 @@ public class BallScript : MonoBehaviour {
     public float WpRadius = .1f;
     public float RampSpeed;
     public float StraightSpeed;
+    private bool Forward;
     // Use this for initialization
     void Start () {
         StartClass = Startpiece.GetComponent<WaypointSystemPieceStart>();
@@ -21,38 +22,60 @@ public class BallScript : MonoBehaviour {
         if (Col.tag == "up")
         {
             Debug.Log("slow");
-            speed/=RampSpeed;
+            speed-=1*RampSpeed;
         }
         if (Col.tag == "down")
         {
             Debug.Log("fast");
-            speed*=RampSpeed;
+            speed+=1*RampSpeed;
         }
         if (Col.tag == "straight")
         {
-            speed /= StraightSpeed;
+            speed -= 1*StraightSpeed;
         }
     }
     // Update is called once per frame
+    private void SpeedSwitch(){
+        GameObject[] UpObjects= GameObject.FindGameObjectsWithTag("up");
+        GameObject[] DownObjects= GameObject.FindGameObjectsWithTag("down");
+ StartClass.Waypoints.Reverse();
+                current = (StartClass.Waypoints.Count -current);
+        foreach (GameObject up in UpObjects){
+            up.tag = "down";
+        }
+         foreach (GameObject down in DownObjects){
+            down.tag = "up";
+        }
+        Forward=true;
+    }
     private void Update()
     {
 
         Debug.Log("speed=" + speed);
-        Path = StartClass.Waypoints;
+       
 
-        transform.position = Vector3.MoveTowards(transform.position, Path[current].transform.position, Time.deltaTime * speed);
-
-        if (Vector3.Distance(Path[current].transform.position, transform.position) < WpRadius)
+        transform.position = Vector3.MoveTowards(transform.position, StartClass.Waypoints[current].transform.position, Time.deltaTime * speed);
+            if (speed <= 0)
+            {
+            SpeedSwitch();
+               
+                    speed++;
+            }
+            else if (speed > .01)
+            {
+                Forward=true;
+            }
+        if (Vector3.Distance(StartClass.Waypoints[current].transform.position, transform.position) < WpRadius)
         {
-            if (speed < .1f)
-            {
-                current--;
-            }
-            else if (speed > 0)
-            {
-                current++;
-            }
-            if (current >= Path.Count)
+           if (Forward){
+               current++;
+           }
+           if (Forward== false){
+               
+             
+               
+           }
+            if (current >= StartClass.Waypoints.Count)
             {
                 current = 0;
             }

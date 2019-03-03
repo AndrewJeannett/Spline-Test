@@ -1342,7 +1342,7 @@ MonoBehaviour:
   speed: 12
   Startpiece: {fileID: 1209231512}
   WpRadius: 0.1
-  RampSpeed: 1.02
+  RampSpeed: 1.002
   StraightSpeed: 1.01
 --- !u!1001 &1018164171
 Prefab:
