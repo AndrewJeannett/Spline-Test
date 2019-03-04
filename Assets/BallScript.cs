@@ -53,9 +53,9 @@ public class BallScript : MonoBehaviour {
     }
     private void Update()
     {
-
+        transform.GetChild(0).Rotate(Vector3.right * speed,Space.Self);
         Debug.Log("speed=" + speed);
-       
+      
         if (Input.GetKeyDown(KeyCode.A))
         {
             if (Play == false)
@@ -69,6 +69,7 @@ public class BallScript : MonoBehaviour {
         if (Play)
         {
             transform.position = Vector3.MoveTowards(transform.position, StartClass.Waypoints[current].transform.position, Time.deltaTime * speed);
+            transform.LookAt(StartClass.Waypoints[current]);
         }
             if (speed <= 0)
             {
@@ -81,12 +82,16 @@ public class BallScript : MonoBehaviour {
         {
         
                current++;
-           
-         
             if (current >= StartClass.Waypoints.Count)
             {
-                current = 0;
+                Rigidbody thisRig = gameObject.GetComponent<Rigidbody>();
+                thisRig.AddRelativeForce(Vector3.forward*(speed*4));
+                //transform.Translate(0, 0, speed*.01f, Space.Self);
+                thisRig.useGravity = true;
+                //current = 0;
             }
+
+
 
         }
     }
