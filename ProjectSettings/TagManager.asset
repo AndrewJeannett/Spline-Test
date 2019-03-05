@@ -9,6 +9,7 @@ TagManager:
   - up
   - down
   - straight
+  - curve
   layers:
   - Default
   - TransparentFX

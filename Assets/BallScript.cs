@@ -11,6 +11,7 @@ public class BallScript : MonoBehaviour {
     public float WpRadius = .1f;
     public float RampSpeed;
     public float StraightSpeed;
+    public float CurveSpeed;
     private bool Play;
     private bool onPath;
     private Rigidbody thisRig;
@@ -38,6 +39,11 @@ public class BallScript : MonoBehaviour {
             {
                 speed -= 1 * StraightSpeed;
             }
+            if (Col.tag == "curve")
+            {
+                speed -= 1 * CurveSpeed;
+            }
+
         }
     }
     // Update is called once per frame
@@ -100,7 +106,7 @@ public class BallScript : MonoBehaviour {
             current++;
             if (current >= StartClass.Waypoints.Count)
             {
-                
+                thisRig.AddRelativeTorque(Vector3.right * (speed/2));
                 thisRig.AddRelativeForce(Vector3.forward*(speed*4));
                 //transform.Translate(0, 0, speed*.01f, Space.Self);
                 thisRig.useGravity = true;

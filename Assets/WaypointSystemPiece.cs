@@ -49,9 +49,10 @@ public class WaypointSystemPiece : MonoBehaviour
         GameObject StartPiece = GameObject.FindGameObjectWithTag("StartPiece");
         WaypointSystemPieceStart OtherStartClass = StartPiece.GetComponent<WaypointSystemPieceStart>();
 
-
-        int LastIndex = OtherStartClass.Waypoints.Count - 1;
-        Transform LastIndexGO = OtherStartClass.Waypoints[LastIndex].GetComponent<Transform>();
+       
+            int LastIndex = OtherStartClass.Waypoints.Count - 1;
+            Transform LastIndexGO = OtherStartClass.Waypoints[LastIndex].GetComponent<Transform>();
+        
         float Dist = Vector3.Distance(LastIndexGO.position, transform.position);
         //Debug.Log(Dist);
         if (Dist >= 3.5f)
