@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23984453093574736}
   - component: {fileID: 64295196403029196}
   - component: {fileID: 114332520750225344}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1529006811415676}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 31.117256, y: 47.608284, z: 5.1148214}
+  m_LocalPosition: {x: -38.640343, y: 14.425763, z: 10.492003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,7 +95,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300016, guid: e5b0e7768a9ac884db53e1703dfc0c32, type: 3}
@@ -115,18 +115,22 @@ MonoBehaviour:
   - {fileID: 1530532783193458, guid: 0899e9348d9aab34eac756fdf45c35f0, type: 2}
   - {fileID: 1684757127224176, guid: a73d17fa52fa894428a6bd0eaea5c08e, type: 2}
   - {fileID: 1255462527337202, guid: 905ccbc55c0009c4fb34563e2323aef2, type: 2}
+  - {fileID: 1895756014738102, guid: f107f119853fca44cab5b00da752a841, type: 2}
   SelectionBox:
   - {fileID: 1191383884326990, guid: c5197e4f59b92f247b5b4ed0ff20f701, type: 2}
   - {fileID: 1530532783193458, guid: d0aca3e856bd353488219564f0c8675b, type: 2}
   - {fileID: 1684757127224176, guid: 2bd4532032c25f947ad708a9bd22efc7, type: 2}
   - {fileID: 1255462527337202, guid: a6069a16d111e6b4ea71964fcd9f8101, type: 2}
+  - {fileID: 1895756014738102, guid: 90f9f8954acbf58418c800acec7ece10, type: 2}
   Supports:
   - {fileID: 1495110494035922, guid: 5d480bb179c39a540bdd80b5be250988, type: 2}
   - {fileID: 1790915184153604, guid: aa3c9615ff4d383478057a3031a48930, type: 2}
   - {fileID: 1352433265325608, guid: fdad6143a258bff46bd30a17b44cda6c, type: 2}
   - {fileID: 1407134343597168, guid: 522d9834dd05ff74d85d0454e4252d72, type: 2}
+  - {fileID: 1352433265325608, guid: fdad6143a258bff46bd30a17b44cda6c, type: 2}
   SupportShadow:
   - {fileID: 1495110494035922, guid: d21ac0c38e2672942af28b4418c09e90, type: 2}
   - {fileID: 1790915184153604, guid: d83aed44130340840af9802d83dd7202, type: 2}
   - {fileID: 1352433265325608, guid: dbcab9ff871e9d9498248663cdcf40d5, type: 2}
   - {fileID: 1407134343597168, guid: 70b79c1c99c1be247a91b792601fb770, type: 2}
+  - {fileID: 1352433265325608, guid: dbcab9ff871e9d9498248663cdcf40d5, type: 2}

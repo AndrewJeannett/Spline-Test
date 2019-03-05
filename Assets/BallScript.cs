@@ -12,11 +12,14 @@ public class BallScript : MonoBehaviour {
     public float RampSpeed;
     public float StraightSpeed;
     private bool Play;
+    private bool onPath;
+    private Rigidbody thisRig;
     // Use this for initialization
     void Start () {
         StartClass = Startpiece.GetComponent<WaypointSystemPieceStart>();
         Play = false;
-	}
+         thisRig = gameObject.GetComponent<Rigidbody>();
+    }
     public void OnTriggerStay(Collider Col)
     {
         if (Play)
@@ -53,7 +56,19 @@ public class BallScript : MonoBehaviour {
     }
     private void Update()
     {
-        transform.GetChild(0).Rotate(Vector3.right * speed,Space.Self);
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = Startpiece.transform.GetChild(0).position;
+            Play = false;
+            speed = 3;
+            current = 0;
+            thisRig.velocity = Vector3.zero;
+            thisRig.angularVelocity = Vector3.zero;
+        }
+        if (onPath == true)
+        {
+            transform.GetChild(0).Rotate(Vector3.right * speed, Space.Self);
+        }
         Debug.Log("speed=" + speed);
       
         if (Input.GetKeyDown(KeyCode.A))
@@ -70,6 +85,7 @@ public class BallScript : MonoBehaviour {
         {
             transform.position = Vector3.MoveTowards(transform.position, StartClass.Waypoints[current].transform.position, Time.deltaTime * speed);
             transform.LookAt(StartClass.Waypoints[current]);
+            onPath = true;
         }
             if (speed <= 0)
             {
@@ -80,15 +96,23 @@ public class BallScript : MonoBehaviour {
           
         if (Vector3.Distance(StartClass.Waypoints[current].transform.position, transform.position) < WpRadius)
         {
-        
-               current++;
+            
+            current++;
             if (current >= StartClass.Waypoints.Count)
             {
-                Rigidbody thisRig = gameObject.GetComponent<Rigidbody>();
+                
                 thisRig.AddRelativeForce(Vector3.forward*(speed*4));
                 //transform.Translate(0, 0, speed*.01f, Space.Self);
                 thisRig.useGravity = true;
                 //current = 0;
+                onPath = false;
+                Play = false;
+            }
+            else
+            {
+                
+                onPath = true;
+                thisRig.useGravity = false;
             }
 
 
