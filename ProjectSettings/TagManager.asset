@@ -10,6 +10,7 @@ TagManager:
   - down
   - straight
   - curve
+  - Loop WP
   layers:
   - Default
   - TransparentFX

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65544718957927148}
   m_Layer: 2
   m_Name: WayPoint
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 65470431676766480}
   m_Layer: 2
   m_Name: WayPoint (4)
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 65160070662176734}
   m_Layer: 2
   m_Name: WayPoint (11)
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 65809461500431290}
   m_Layer: 2
   m_Name: WayPoint (5)
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 65169792082496008}
   m_Layer: 2
   m_Name: WayPoint (2)
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 23306399248782410}
   - component: {fileID: 64334747029404408}
   - component: {fileID: 114644149371094644}
+  - component: {fileID: 114101140219654516}
   m_Layer: 2
   m_Name: Cylinder_004 1
   m_TagString: Untagged
@@ -133,7 +134,7 @@ GameObject:
   - component: {fileID: 65779507030425630}
   m_Layer: 2
   m_Name: WayPoint (3)
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +173,7 @@ GameObject:
   - component: {fileID: 65525035908485544}
   m_Layer: 2
   m_Name: WayPoint (8)
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +212,7 @@ GameObject:
   - component: {fileID: 65731630501266888}
   m_Layer: 2
   m_Name: WayPoint (6)
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +230,7 @@ GameObject:
   - component: {fileID: 65195269922563522}
   m_Layer: 2
   m_Name: WayPoint (9)
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,7 +248,7 @@ GameObject:
   - component: {fileID: 65594945490252650}
   m_Layer: 2
   m_Name: WayPoint (7)
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -265,7 +266,7 @@ GameObject:
   - component: {fileID: 65633331033046406}
   m_Layer: 2
   m_Name: WayPoint (1)
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,7 +284,7 @@ GameObject:
   - component: {fileID: 65637815898257054}
   m_Layer: 2
   m_Name: WayPoint (10)
-  m_TagString: Untagged
+  m_TagString: Loop WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1101,7 +1102,7 @@ BoxCollider:
   m_GameObject: {fileID: 1123631974480394}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1113,7 +1114,7 @@ BoxCollider:
   m_GameObject: {fileID: 1228993413266406}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1149,7 +1150,7 @@ BoxCollider:
   m_GameObject: {fileID: 1748543949996038}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1173,7 +1174,7 @@ BoxCollider:
   m_GameObject: {fileID: 1042335122668924}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1209,7 +1210,7 @@ BoxCollider:
   m_GameObject: {fileID: 1549175055924910}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1221,7 +1222,7 @@ BoxCollider:
   m_GameObject: {fileID: 1003808883376316}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1233,7 +1234,7 @@ BoxCollider:
   m_GameObject: {fileID: 1817325723705422}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1257,7 +1258,7 @@ BoxCollider:
   m_GameObject: {fileID: 1934449125242172}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1269,7 +1270,7 @@ BoxCollider:
   m_GameObject: {fileID: 1953610764442430}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1305,7 +1306,7 @@ BoxCollider:
   m_GameObject: {fileID: 1715054654039246}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1317,7 +1318,7 @@ BoxCollider:
   m_GameObject: {fileID: 1328234266729240}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1329,7 +1330,7 @@ BoxCollider:
   m_GameObject: {fileID: 1203148177755580}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1345,6 +1346,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9144497, y: 0.9239979, z: 1}
   m_Center: {x: -0.19, y: 5.08, z: -0.69}
+--- !u!114 &114101140219654516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255462527337202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab731c2090a6e94a8de47d77dfbd6fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundWaypoints: []
 --- !u!114 &114644149371094644
 MonoBehaviour:
   m_ObjectHideFlags: 1
