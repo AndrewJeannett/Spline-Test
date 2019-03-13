@@ -40,6 +40,7 @@ public class WaypointSystemPiece : MonoBehaviour
             gameObject.transform.SetParent(StartPiece.transform);
             ListAdd();
         }
+       
     }
 
     void ListAdd()

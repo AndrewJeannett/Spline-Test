@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoopSound : MonoBehaviour {
-    public List<GameObject> SoundWaypoints;
+public class rotate : MonoBehaviour {
+    public float speed;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +11,6 @@ public class LoopSound : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        transform.Rotate((new Vector3(0, 0, speed) * Time.deltaTime));
 	}
 }

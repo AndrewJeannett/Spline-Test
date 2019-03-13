@@ -23,6 +23,9 @@ GameObject:
   - component: {fileID: 23088058547501724}
   - component: {fileID: 64250624825208952}
   - component: {fileID: 114948328910234134}
+  - component: {fileID: 65484400095484316}
+  - component: {fileID: 65623983116801634}
+  - component: {fileID: 114507908278298606}
   m_Layer: 0
   m_Name: Cylinder_008 2
   m_TagString: Untagged
@@ -37,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1684757127224176}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.674123, y: 34.923088, z: -15.163511}
+  m_LocalPosition: {x: 0.49425483, y: 23.041718, z: -10.489377}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,6 +103,42 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300022, guid: e5b0e7768a9ac884db53e1703dfc0c32, type: 3}
+--- !u!65 &65484400095484316
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684757127224176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7555628, y: 0.74655914, z: 0.86851215}
+  m_Center: {x: -2.81, y: 0.37327957, z: -0.09647894}
+--- !u!65 &65623983116801634
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684757127224176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.755563, y: 0.74655914, z: 0.81338024}
+  m_Center: {x: 0.8312918, y: 0.37327957, z: -0.06891298}
+--- !u!114 &114507908278298606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684757127224176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baf13178986e614a98afb0d9447d810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShadowMat: {fileID: 2100000, guid: 6231fcfaf79ea1549b19de18442e240c, type: 2}
 --- !u!114 &114948328910234134
 MonoBehaviour:
   m_ObjectHideFlags: 1

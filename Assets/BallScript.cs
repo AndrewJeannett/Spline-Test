@@ -13,6 +13,7 @@ public class BallScript : MonoBehaviour
     public float RampSpeed;
     public float StraightSpeed;
     public float CurveSpeed;
+    public float ScrewSpeed;
     private bool Play;
     private bool onPath;
     private bool Forward;
@@ -30,11 +31,13 @@ public class BallScript : MonoBehaviour
     {
         if ((other.tag == "Loop WP") && (Forward))
         {
+            
             LoopSound.pitch += .25f;
             LoopSound.Play();
         }
         if ((other.tag == "Loop WP") && (Forward==false))
         {
+           
             LoopSound.pitch -= .25f;
             LoopSound.Play();
         }
@@ -44,6 +47,11 @@ public class BallScript : MonoBehaviour
     {
         if (Play)
         {
+            if (Col.tag == "Screw")
+            {
+
+                speed = ScrewSpeed;
+            }
             if (Col.tag == "up")
             {
                
@@ -85,6 +93,7 @@ public class BallScript : MonoBehaviour
     }
     private void Update()
     {
+        Debug.Log(speed);
         if (Input.GetKeyDown(KeyCode.R))
         {
             transform.position = Startpiece.transform.GetChild(0).position;
@@ -130,10 +139,11 @@ public class BallScript : MonoBehaviour
             current++;
             if (current >= StartClass.Waypoints.Count)
             {
-                thisRig.AddRelativeTorque(Vector3.right * (speed / 2));
+                //thisRig.AddRelativeTorque(Vector3.right * (speed / 2));
                 thisRig.AddRelativeForce(Vector3.forward * (speed * 4));
                 //transform.Translate(0, 0, speed*.01f, Space.Self);
                 thisRig.useGravity = true;
+                thisRig.WakeUp();
                 //current = 0;
                 onPath = false;
                 Play = false;
